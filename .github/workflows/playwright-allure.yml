@@ -39,7 +39,11 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Cucumber tests
-        run: npm test
+        run: |
+          npx cucumber-js features/**/*.feature \
+            --require features/step_definitions/**/*.ts \
+            --require-module ts-node/register \
+            --format progress
 
       - name: Install Allure CLI globally
         run: npm install -g allure-commandline

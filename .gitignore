@@ -36,3 +36,4 @@ Thumbs.db
 coverage/
 
 # GitHub Pages (no ignorar gh-pages branch si lo manejas automáticamente desde Actions) 
+$Recycle.Bin/ 
