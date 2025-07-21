@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: write  # ⬅️ Requerido para hacer push a gh-pages
+  contents: write  # Necesario para publicar en gh-pages
 
 jobs:
   test-and-publish:
@@ -15,7 +15,8 @@ jobs:
     timeout-minutes: 60
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -23,17 +24,24 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      - name: Clean npm cache (recomendado al cambiar versiones)
+        run: npm cache clean --force
+
       - name: Install dependencies
         run: npm ci
+        env:
+          NODE_ENV: development  # Asegura que se instalen devDependencies
+
+      - name: Debug dependencies
+        run: ls -la node_modules/@cucumber
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
       - name: Run Cucumber tests
         run: npm test
-        continue-on-error: true
 
-      - name: Install Allure
+      - name: Install Allure CLI globally
         run: npm install -g allure-commandline
 
       - name: Generate Allure Report
@@ -46,4 +54,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
-          publish_branch: gh-pages 
+          publish_branch: gh-pages

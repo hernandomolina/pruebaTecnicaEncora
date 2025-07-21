@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+dist/
+build/
+
+# Allure reports (no se suben, se generan en CI/CD)
+allure-results/
+allure-report/
+
+# VS Code settings
+.vscode/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Output from Playwright
+test-results/
+playwright-report/
+
+# Environment files (si los usas)
+.env
+.env.*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage (si usas coverage con Jest o nyc)
+coverage/
+
+# GitHub Pages (no ignorar gh-pages branch si lo manejas automáticamente desde Actions) 
