@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
-    "outDir": "dist",
-    "rootDir": ".",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["node", "playwright"]
-  }
+    "target": "ES2020", // Permite usar características modernas de JavaScript
+    "module": "commonjs", // Ideal para Node.js
+    "outDir": "dist", // Carpeta de salida para los archivos compilados
+    "rootDir": ".", // Raíz de los archivos fuente
+    "strict": true, // Comprobaciones estrictas de tipos
+    "esModuleInterop": true, // Mejor interoperabilidad entre módulos
+    "skipLibCheck": true, // Omite la comprobación de tipos en dependencias externas
+    "forceConsistentCasingInFileNames": true, // Evita errores por mayúsculas/minúsculas en nombres de archivos
+    "moduleResolution": "node", // Resolución de módulos como en Node.js
+    "resolveJsonModule": true, // Permite importar archivos .json
+    "types": ["node", "playwright"] // Tipos incluidos globalmente
+  },
+  "include": ["src", "features"]
 }

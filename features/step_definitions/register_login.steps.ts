@@ -2,7 +2,7 @@ import { Given, When, Then, setDefaultTimeout } from '@cucumber/cucumber';
 import { chromium, Browser, Page } from 'playwright';
 import { generateUserData, UserData } from '../../src/support/dataGenerator';
 import assert from 'assert';
-import { Actor } from '../../src/screenplay/Actor';
+import { Actor } from '../../src/screenplay/actors/Actor';
 import { Register } from '../../src/screenplay/tasks/Register';
 import { Login } from '../../src/screenplay/tasks/Login';
 import { Logout } from '../../src/screenplay/tasks/Logout';
