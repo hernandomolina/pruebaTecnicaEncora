@@ -1,1 +1,1 @@
-[{"uid":"b3fab7e3f2c67b1a","name":"Registro exitoso y login posterior","time":{"start":1753136968322,"stop":1753136975104,"duration":6782},"status":"passed","severity":"normal"}]
+[{"uid":"edc307ca68edfca0","name":"Registro exitoso y login posterior","time":{"start":1753139143408,"stop":1753139145452,"duration":2044},"status":"broken","severity":"normal"}]
