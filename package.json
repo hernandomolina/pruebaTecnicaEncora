@@ -1,0 +1,31 @@
+{
+  "name": "pruebatecnicaencora",
+  "version": "1.0.0",
+  "description": "Repositorio con la prueba tecnica para el Rol de QA en Encora",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require-module ts-node/register --require features/step_definitions/**/*.ts --format allure-cucumberjs/reporter",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "test:headless": "npx playwright test --headed=false",
+    "test:headed": "npx playwright test --headed=true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.0.0",
+    "@cucumber/messages": "^28.0.0",
+    "@cucumber/pretty-formatter": "^2.0.0",
+    "@faker-js/faker": "^9.9.0",
+    "@types/node": "^24.0.14",
+    "allure-commandline": "^2.34.1",
+    "allure-cucumberjs": "^3.3.2",
+    "playwright": "^1.54.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
+  }
+}
