@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"Como usuario nuevo
-  Quiero poder registrarme y luego iniciar sesión en ParaBank
-  Para validar que el flujo de registro y autenticación funciona correctamente","2044","Registro exitoso y login posterior","","Mon Jul 21 23:05:43 UTC 2025","broken","Mon Jul 21 23:05:45 UTC 2025","","","",""
