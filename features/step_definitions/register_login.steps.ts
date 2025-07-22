@@ -16,7 +16,7 @@ let user: UserData;
 let actor: Actor;
 
 Given('que el usuario navega al home de ParaBank', async function () {
-  browser = await chromium.launch({ headless: false });
+  browser = await chromium.launch({ headless: true });
   (globalThis as any).browser = browser;
   const context = await browser.newContext(); // contexto incógnito
   page = await context.newPage();
